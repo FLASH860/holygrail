@@ -78,3 +78,13 @@ for when credits exist). Everything Higgsfield was supposed to produce was repla
   drag then spins the can freely. Esc / "Back to the shelf" / scrolling away exits.
 - Soft bloom on the pedestal ring only (desktop). The glossy floor is a real reflector on desktop,
   a plain metal floor on phones.
+
+## Step 5 — sneaker
+
+- Model: the Khronos/Shopify CC-BY sample shoe (see MODELS.md) — the one object that is not
+  procedural. **Credit is required** and is in the footer. Swap it for your own .glb any time:
+  replace `public/models/sneaker.glb` (variants are optional).
+- The word "STRIDE" is real 3D text on the z=0 plane and the shoe is centred on that plane, so the
+  toe genuinely passes in front of the letters while the heel passes behind — no masking tricks.
+- Scroll carries the shoe across the word while it turns; drag spins it; swatches swap the material
+  live during one slow turn; size buttons scale the shoe slightly and lift the chosen size.
