@@ -226,3 +226,116 @@
     max-width: 22ch;
   }
 }
+
+/* ───────── shared section furniture ───────── */
+.hints {
+  position: absolute;
+  left: var(--pad);
+  bottom: var(--pad);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 26px;
+  color: var(--muted);
+  max-width: min(720px, 80vw);
+}
+.hints li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hints li::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* ───────── 2. watch ───────── */
+.watch .stage {
+  background: var(--bg);
+}
+.watch-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(60% 55% at 62% 50%, color-mix(in srgb, var(--accent) 20%, transparent), transparent 70%), radial-gradient(90% 60% at 50% 110%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 70%);
+}
+.watch-copy {
+  position: absolute;
+  left: var(--pad);
+  top: 50%;
+  transform: translateY(-58%);
+  width: min(400px, 36vw);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.watch-copy .display {
+  font-size: clamp(40px, 5.2vw, 88px);
+}
+.watch-tag {
+  position: absolute;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  color: var(--fg);
+  transition: opacity 0.5s var(--ease);
+  will-change: opacity;
+}
+.watch-tag i {
+  width: 1px;
+  height: var(--len, 54px);
+  background: linear-gradient(to top, transparent, var(--accent));
+}
+.watch-tag span {
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+}
+.watch-tag.is-up {
+  bottom: 0;
+  flex-direction: column-reverse;
+}
+.watch-tag.is-up i {
+  background: linear-gradient(to bottom, transparent, var(--accent));
+}
+.watch-tag.is-down {
+  top: 0;
+}
+@media (max-width: 820px) {
+  .watch-copy {
+    top: calc(var(--nav-h) + 16px);
+    transform: none;
+    width: auto;
+    right: var(--pad);
+    gap: 14px;
+  }
+  .watch-copy .lede {
+    font-size: 13px;
+  }
+  .hints {
+    font-size: 9px;
+    gap: 6px 16px;
+  }
+}
+.watch-outro {
+  position: absolute;
+  right: var(--pad);
+  bottom: var(--pad);
+  font-size: clamp(22px, 2.6vw, 40px);
+  line-height: 1.1;
+  text-align: right;
+  opacity: 0;
+  pointer-events: none;
+}
+@media (max-width: 820px) {
+  .watch-outro {
+    bottom: calc(var(--pad) + 64px);
+  }
+}

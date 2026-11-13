@@ -56,3 +56,14 @@ for when credits exist). Everything Higgsfield was supposed to produce was repla
 - "Surendran" is set in italic serif over the foreground; the full name is an `<h1>` for screen readers.
 - **Open**: About copy and the three facts (focus / based / status) are my wording — please edit.
   Location is shown as "India — IST" because CLAUDE.md only gives the timezone.
+
+## Step 3 — watch
+
+- Built procedurally (see MODELS.md). Nine parts explode along the watch axis as you scroll; the
+  assembly turns to a 3/4 view while it comes apart so the layers read left-to-right.
+- Order differs slightly from the brief's list (strap → case → bezel → dial → movement → gears):
+  parts are laid out in their true physical stacking order, front to back, because that is what an
+  exploded view is for.
+- Hover isolates a part (others fade to 10%), drag rotates with inertia, clicking the gold crown
+  winds it: hands sweep 12 turns and settle back on the real time, gears race, optional ticks.
+- The intro copy slides away while the movement opens so the labels have room.

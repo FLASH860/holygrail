@@ -64,8 +64,8 @@ export function Studio({ mood = 'warm', strength = 1 }: { mood?: 'warm' | 'neutr
   const theme = useStore((s) => s.theme)
   const lite = useStore((s) => s.lite)
   const tint = mood === 'warm' ? '#ffd9ae' : mood === 'cool' ? '#bcd4ff' : '#ffffff'
-  const base = theme === 'dark' ? '#070605' : '#8f8a80'
-  const k = strength * (theme === 'dark' ? 1 : 1.25)
+  const base = theme === 'dark' ? '#2b2824' : '#a39d92'
+  const k = strength * (theme === 'dark' ? 1.7 : 1.9)
   return (
     <Environment key={`${theme}-${mood}-${strength}`} resolution={lite ? 128 : 256} frames={1}>
       <color attach="background" args={[base]} />
@@ -74,6 +74,8 @@ export function Studio({ mood = 'warm', strength = 1 }: { mood?: 'warm' | 'neutr
       <Lightformer form="rect" intensity={1.5 * k} color="#ffffff" position={[7, 2, -1]} scale={[1.2, 8, 1]} />
       <Lightformer form="ring" intensity={1.4 * k} color={tint} position={[3, -3, 6]} scale={3} />
       <Lightformer form="rect" intensity={0.8 * k} color={tint} position={[0, 1, -8]} scale={[12, 2, 1]} />
+      <Lightformer form="rect" intensity={1.1 * k} color="#fff3e2" position={[0, 0.5, 9]} scale={[7, 7, 1]} />
+      <Lightformer form="rect" intensity={0.9 * k} color="#ffffff" position={[0, -6, 0]} scale={[10, 10, 1]} />
     </Environment>
   )
 }
