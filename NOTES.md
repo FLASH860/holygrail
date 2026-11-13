@@ -88,3 +88,11 @@ for when credits exist). Everything Higgsfield was supposed to produce was repla
   toe genuinely passes in front of the letters while the heel passes behind — no masking tricks.
 - Scroll carries the shoe across the word while it turns; drag spins it; swatches swap the material
   live during one slow turn; size buttons scale the shoe slightly and lift the chosen size.
+
+## Step 6 — headphones
+
+- Procedural. Parts start apart and assemble over the first ~70% of the scroll, then hold.
+- Clicking a cup swings its shell and plate outward to expose the driver; click again to close.
+- ANC switch: the studio goes cool and dim, the background drops to near-black blue, the idle
+  float stops (stillness as the visual for silence), a status LED lights on each cup, and the
+  headline changes. Same neumorphic switch language as the theme toggle.
