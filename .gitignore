@@ -1,0 +1,21 @@
+node_modules/
+dist/
+.vite/
+*.local
+.env
+.env.*
+.DS_Store
+Thumbs.db
+*.log
+.wrangler/
+
+# other people's work — never push (repo is public)
+/reference/
+/references/
+
+# raw personal photos stay local; the site only reads assets/me-processed
+/assets/me/
+
+# local tooling caches
+/scripts/.cache/
+__pycache__/
