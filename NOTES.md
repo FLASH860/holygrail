@@ -38,3 +38,21 @@ for when credits exist). Everything Higgsfield was supposed to produce was repla
 - The raw photos were moved from `/assets` into `/assets/me` (where CLAUDE.md says they live) and
   **gitignored**: the repo is public and the site only needs the processed versions. Files are
   byte-for-byte untouched.
+
+## Step 2 — hero + about
+
+- **Hero composition** (back → front): sky → far ridge → giant "KANISHQ" (3D serif text) → mid ridge →
+  warm halo → you → near ridge → out-of-focus grass. All real planes at different depths, so the
+  scroll push-in and the cursor both produce true parallax.
+- **Hero photo**: photo 3 (the seated studio portrait) — it already has the cinematic grade. It is
+  cropped above the lower edge of the frame (the original has duplicated hair shapes along the bottom).
+- **Aura sequence substitute**: because no video could be generated, a shader relights the cut-out as
+  you scroll: exposure builds, a rim light walks around the silhouette, a key light sweeps across the
+  face, a soft halo grows behind, and the plane turns a few degrees. No particles.
+  → When a Higgsfield sequence exists, export it as frames and set `media.me.heroSequence` in
+  `src/config/media.ts`; the hero will scrub those frames instead. Suggested prompt is in MODELS.md.
+- **About section** was not in CLAUDE.md but you mentioned one: added after the object sections' lead-in,
+  using photo 1 regraded warm/low-key, as a stack of CSS 3D layers that tilt with the cursor.
+- "Surendran" is set in italic serif over the foreground; the full name is an `<h1>` for screen readers.
+- **Open**: About copy and the three facts (focus / based / status) are my wording — please edit.
+  Location is shown as "India — IST" because CLAUDE.md only gives the timezone.

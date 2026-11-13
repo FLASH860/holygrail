@@ -3,7 +3,7 @@ export const site = {
   first: 'Kanishq',
   last: 'Surendran',
   role: 'Developer & designer of considered digital products',
-  location: 'Bengaluru, India',
+  location: 'India — IST',
   timezone: 'Asia/Kolkata',
   links: {
     github: 'https://github.com/FLASH860',
