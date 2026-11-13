@@ -67,3 +67,14 @@ for when credits exist). Everything Higgsfield was supposed to produce was repla
 - Hover isolates a part (others fade to 10%), drag rotates with inertia, clicking the gold crown
   winds it: hands sweep 12 turns and settle back on the real time, gears race, optional ticks.
 - The intro copy slides away while the movement opens so the labels have room.
+
+## Step 4 — cans
+
+- Made-up brand: **VEYRA — "Still energy"**, five flavours (Yuzu Citrine, Black Cherry, Glacier Mint,
+  Blood Orange, Midnight Plum). Names, notes and numbers are invented; edit in `src/config/site.ts`.
+- Label art is generated on a canvas (not image files in /assets) so it stays sharp and editable.
+- Arrows or horizontal drag cycle the arc; clicking a side can selects it; clicking the centre can
+  flies the camera in, shifts the whole scene to the flavour colour and slides in the info panel;
+  drag then spins the can freely. Esc / "Back to the shelf" / scrolling away exits.
+- Soft bloom on the pedestal ring only (desktop). The glossy floor is a real reflector on desktop,
+  a plain metal floor on phones.

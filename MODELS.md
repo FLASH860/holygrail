@@ -11,3 +11,4 @@ separately addressable parts for the exploded views.
 | Object      | Source                                   | File                              | Notes |
 | ----------- | ---------------------------------------- | --------------------------------- | ----- |
 | Watch       | Procedural (Three.js)                    | `src/three/WatchModel.tsx`        | 9 separable parts: strap, case + crown, main plate + barrel, gear train + balance, bridges + jewels, dial, hands, bezel, crystal. Gears are generated tooth-by-tooth and extruded; case, bezel and crystal are lathed profiles. Hands show live IST. Reused in Contact. |
+| Can         | Procedural (Three.js)                    | `src/sections/CansScene.tsx`      | Lathed shoulder, neck, rim and base in aluminium; label is a separate cylinder. Label art for the made-up brand **VEYRA** (5 flavours) is drawn on canvas at runtime in `src/three/labels.ts` — Higgsfield could not generate it. |

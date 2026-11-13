@@ -477,9 +477,8 @@
   transform: translateY(-30px);
 }
 .cans.is-focused .cans-nav {
-  left: var(--pad);
-  transform: none;
-  opacity: 0.9;
+  opacity: 0;
+  pointer-events: none;
 }
 .cans.is-focused .cans-name {
   display: none;

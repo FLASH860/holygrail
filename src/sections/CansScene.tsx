@@ -124,6 +124,7 @@ export default function CansScene({ active, focused, progress, onSelect, onFocus
   }, [gl, onCycle])
 
   useEffect(() => {
+    setCursor(focused ? 'Spin' : '')
     if (!focused) {
       s.current.spinT = Math.round(s.current.spinT / (Math.PI * 2)) * Math.PI * 2
       s.current.tiltT = 0
@@ -150,19 +151,19 @@ export default function CansScene({ active, focused, progress, onSelect, onFocus
       off = ((((off + N / 2) % N) + N) % N) - N / 2
       const a = off * STEP
       const centre = Math.max(0, 1 - Math.abs(off))
-      const spread = 1 + f * 0.9 * (1 - centre)
-      can.position.set(Math.sin(a) * R * spread, 0.32 + Math.sin(t * 0.7 + i * 1.3) * 0.045 + (1 - enter) * (-2.4 - Math.abs(off) * 0.5) + centre * 0.1, Math.cos(a) * R - R + centre * f * 0.5)
+      const spread = 1 + f * 2.4 * (1 - centre)
+      can.position.set(Math.sin(a) * R * spread, 0.1 + Math.sin(t * 0.7 + i * 1.3) * 0.045 + (1 - enter) * (-2.4 - Math.abs(off) * 0.5) + centre * 0.1, Math.cos(a) * R - R + centre * f * 0.5)
       can.rotation.z = -a * 0.42 * (1 - f * centre)
       can.rotation.y = a * 0.5
       can.scale.setScalar((0.86 + centre * 0.2) * (1 - f * (1 - centre) * 0.25))
-      inn.rotation.y = Math.PI + t * 0.16 * (1 - f) + (centre > 0.5 ? st.spin : 0)
+      inn.rotation.y = Math.PI - 0.75 + Math.sin(t * 0.3 + i) * 0.12 * (1 - f) + (centre > 0.5 ? st.spin : 0)
       inn.rotation.x = centre > 0.5 ? st.tilt : 0
     }
 
     // camera: fly in on focus, sliding the can toward the left third
-    const cz = THREE.MathUtils.lerp(8.4, 4.4, f) / Math.max(fit, 0.62)
-    camera.position.set(THREE.MathUtils.lerp(0, 0.95 * fit, f), THREE.MathUtils.lerp(0.75, 0.35, f), cz)
-    camera.lookAt(THREE.MathUtils.lerp(0, 0.95 * fit, f), 0.3, 0)
+    const cz = THREE.MathUtils.lerp(8.4, 5.4, f) / Math.max(fit, 0.62)
+    camera.position.set(THREE.MathUtils.lerp(0, 1.3 * fit, f), THREE.MathUtils.lerp(0.75, 0.25, f), cz)
+    camera.lookAt(THREE.MathUtils.lerp(0, 1.3 * fit, f), THREE.MathUtils.lerp(0.3, 0.15, f), 0)
 
     // background drifts to the flavour colour while focused
     const fl = flavours[active]
@@ -172,7 +173,7 @@ export default function CansScene({ active, focused, progress, onSelect, onFocus
     if (scene.fog) (scene.fog as THREE.Fog).color.copy(bg)
     ringColor.lerp(new THREE.Color(fl.glow), 1 - Math.exp(-3 * dt))
     mats.ring.color.copy(ringColor).multiplyScalar(1.8)
-    if (floorMat.current) floorMat.current.color.copy(bg).multiplyScalar(1.6)
+    if (floorMat.current) floorMat.current.color.copy(bg).multiplyScalar(1.15)
   })
 
   return (
